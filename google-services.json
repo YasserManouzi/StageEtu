@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "874318414700",
+    "project_id": "gestionstagestp2",
+    "storage_bucket": "gestionstagestp2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874318414700:android:645e372debbfbf1e45e949",
+        "android_client_info": {
+          "package_name": "com.example.a5j6_travailpratique2_yasser_manouzi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVGRladDhygP44TFVBWWsga0H4G850HTY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

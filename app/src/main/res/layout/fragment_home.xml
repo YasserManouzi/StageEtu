@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:background="@drawable/degradecouleur"
+    >
+
+
+
+<Button
+android:id="@+id/btn_connexion"
+android:layout_width="332dp"
+android:layout_height="68dp"
+android:background="@drawable/degradercouleurbtn"
+android:fontFamily="sans-serif-medium"
+android:text="@string/btn_connexion"
+android:textAllCaps="false"
+android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+android:textColor="@color/white"
+android:textSize="20sp"
+
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.493"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.829" />
+
+    <TextView
+        android:id="@+id/tv_inscription"
+        android:layout_width="337dp"
+        android:layout_height="22dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="@string/tv_inscription"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FEFEFE"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.944" />
+
+    <TextView
+        android:id="@+id/tv_nomConnexion"
+        android:layout_width="202dp"
+        android:layout_height="59dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:text="@string/tv_nomConnexion"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.217" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_courrielInscription"
+        android:layout_width="332dp"
+        android:layout_height="68dp"
+        android:background="@drawable/changementforme"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#6C6C6C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.405">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_courrielConnexion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tiet_courrielInscription" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_mdpConnexion"
+        android:layout_width="332dp"
+        android:layout_height="68dp"
+        android:background="@drawable/changementforme"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.601">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_mdpConnexion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tiet_mdpConnexion" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/chk_afficherMdp"
+        android:layout_width="187dp"
+        android:layout_height="30dp"
+        android:text="@string/chk_afficherMdp"
+        android:onClick="onClickChk_affichageMdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.174"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.71" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "883183173981",
+    "project_id": "gestionstages-2e6ef",
+    "storage_bucket": "gestionstages-2e6ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883183173981:android:8ebf458aca0ef42cd268b4",
+        "android_client_info": {
+          "package_name": "com.example.gestonstages"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi9ge7H__MZLA3M5hcd5kXpci8woeJ5oA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
