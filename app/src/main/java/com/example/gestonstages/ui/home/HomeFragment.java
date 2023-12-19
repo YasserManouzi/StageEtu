@@ -14,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.gestonstages.ActiviteDeconnexion;
 import com.example.gestonstages.ActiviteInscription;
 import com.example.gestonstages.R;
 import com.example.gestonstages.databinding.FragmentHomeBinding;
@@ -78,8 +77,8 @@ public class HomeFragment extends Fragment {
                             if (task.isSuccessful()) {
                                 FirebaseUser utilisateur = firebaseAuth.getCurrentUser();
 
-                                Intent intentActiviteDeconnexion = new Intent(getActivity(), ActiviteDeconnexion.class);
-                                startActivity(intentActiviteDeconnexion);
+                           //     Intent intentActiviteDeconnexion = new Intent(getActivity(), ActiviteDeconnexion.class);
+                           //     startActivity(intentActiviteDeconnexion);
                                 Toast.makeText(getActivity(), "Connexion réussie", Toast.LENGTH_SHORT).show();
 
                             } else {

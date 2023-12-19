@@ -65,7 +65,7 @@ app:layout_constraintVertical_bias="0.829" />
         app:layout_constraintVertical_bias="0.217" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_courrielInscription"
+        android:id="@+id/til_courrielConnexion"
         android:layout_width="332dp"
         android:layout_height="68dp"
         android:background="@drawable/changementforme"
@@ -86,7 +86,7 @@ app:layout_constraintVertical_bias="0.829" />
             android:id="@+id/tiet_courrielConnexion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/tiet_courrielInscription" />
+            android:hint="@string/tiet_courrielConnexion" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

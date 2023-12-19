@@ -12,10 +12,18 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="btn_connexion">Sign in</string>
     <string name="tv_inscription">Don\'t have an account ? Sign Up</string>
-    <string name="tiet_courrielInscription">Email</string>
+    <string name="tiet_courrielConnexion">Email</string>
     <string name="tiet_mdpConnexion">Password</string>
     <string name="chk_afficherMdp">Show password</string>
     <string name="title_activity_activite_deconnexion">ActiviteDeconnexion</string>
     <string name="tv_nomConnexion">Sign In</string>
+    <string name="tv_titreInscription">Sign Up</string>
+    <string name="tiet_courrielInscription">Email</string>
+    <string name="tiet_mdpInscription">Password</string>
+    <string name="btn_inscription">Password</string>
+    <string name="tv_connexionAccueil">Already have an account ? Sign in</string>
+    <string name="tiet_mdpConfirmationInscription">Confirm password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
