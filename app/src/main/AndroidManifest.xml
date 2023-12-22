@@ -13,10 +13,11 @@
         android:theme="@style/Theme.GestonStages"
         tools:targetApi="31">
         <activity
-            android:name=".ActiviteDeconnexion"
-            android:exported="false"
-            android:label="@string/title_activity_activite_deconnexion"
-            android:theme="@style/Theme.GestonStages.NoActionBar" />
+            android:name=".ModificationProfile"
+            android:exported="false" />
+        <activity
+            android:name=".ActiviteAccueil"
+            android:exported="false" />
         <activity
             android:name=".ActiviteInscription"
             android:exported="false" />

@@ -8,7 +8,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
+    <string name="menu_modifierprofile">Modifier le profile</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="btn_connexion">Sign in</string>
     <string name="tv_inscription">Don\'t have an account ? Sign Up</string>
@@ -25,5 +25,11 @@
     <string name="tiet_mdpConfirmationInscription">Confirm password</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_titreProfil">Profile</string>
+    <string name="tv_titreInfoPerso">Personal Informations</string>
+    <string name="tiet_nom">Name</string>
+    <string name="tv_mdpModifier">Update password</string>
+    <string name="tv_coordonnees">Contact details</string>
+    <string name="btn_sauvegarder">Save</string>
 
 </resources>

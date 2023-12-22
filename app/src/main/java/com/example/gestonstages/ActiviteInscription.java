@@ -1,9 +1,8 @@
 package com.example.gestonstages;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,12 +14,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
-import com.example.gestonstages.ui.gallery.GalleryFragment;
-import com.example.gestonstages.ui.home.HomeFragment;
-import com.example.gestonstages.ui.slideshow.SlideshowFragment;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -32,8 +28,6 @@ public class ActiviteInscription extends AppCompatActivity {
     TextInputEditText tiet_courriel, tiet_mdp, tiet_mdpConfirmation;
     FirebaseAuth firebaseAuth;
 
-    private DrawerLayout drawerLayout;
-    private ActionBarDrawerToggle actionBarDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,56 +40,9 @@ public class ActiviteInscription extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        drawerLayout = findViewById(R.id.drawer_layout);
-        actionBarDrawerToggle = new ActionBarDrawerToggle(
-                this,
-                drawerLayout,
-                R.string.navigation_drawer_open,
-                R.string.navigation_drawer_close
-        );
-
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
-                int itemId = menuItem.getItemId();
-
-                if (itemId == R.id.nav_home) {
-
-                    startActivity(new Intent(ActiviteInscription.this, HomeFragment.class));
-                } else if (itemId == R.id.nav_gallery) {
-
-                    startActivity(new Intent(ActiviteInscription.this, GalleryFragment.class));
-                } else if (itemId == R.id.nav_slideshow) {
-
-                    startActivity(new Intent(ActiviteInscription.this, SlideshowFragment.class));
-                }
 
 
-                return true;
-            }
-
-
-        });
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Gérer les actions de l'icône de la barre d'action (le bouton de menu)
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-
 
 
     public void onClickConnexion(View view) {
