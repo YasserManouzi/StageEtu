@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_accueil"
+        android:icon="@drawable/img_acceuil"
+        android:title="Accueil" />
+
+    <item
+        android:id="@+id/menu_recherche"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Recherche" />
+
+</menu>
