@@ -42,6 +42,8 @@ public class ActiviteAccueil extends AppCompatActivity {
 
                     return true;
                 } else if (item.getItemId() == R.id.menu_recherche) {
+
+                    startActivity(new Intent(ActiviteAccueil.this, RechercheStage.class));
                     return true;
                 }
                         return false;
