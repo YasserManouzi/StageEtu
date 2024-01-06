@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 
-public class ActiviteAccueil extends AppCompatActivity {
+public class StageDetailsActivity extends AppCompatActivity {
 
 
     private DrawerLayout drawerLayout;
@@ -25,7 +24,7 @@ public class ActiviteAccueil extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_accueil);
+        setContentView(R.layout.activity_stage_details);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(
@@ -34,6 +33,8 @@ public class ActiviteAccueil extends AppCompatActivity {
                 R.string.navigation_drawer_open,
                 R.string.navigation_drawer_close
         );
+
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -56,12 +57,13 @@ public class ActiviteAccueil extends AppCompatActivity {
 
                     bottomNavigationView.getMenu().findItem(R.id.menu_accueil).setActionView(new View(getApplicationContext()));
 
-                    startActivity(new Intent(ActiviteAccueil.this, RechercheStage.class));
+                    startActivity(new Intent(StageDetailsActivity.this, RechercheStage.class));
                     return true;
                 }
                 return false;
             }
         });
+
 
 
 
@@ -71,6 +73,7 @@ public class ActiviteAccueil extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         NavigationView navigationView = findViewById(R.id.nav_view);
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
 
 
@@ -81,13 +84,13 @@ public class ActiviteAccueil extends AppCompatActivity {
 
                 if (itemId == R.id.nav_home) {
 
-                    startActivity(new Intent(ActiviteAccueil.this, ActiviteAccueil.class));
+                    startActivity(new Intent(StageDetailsActivity.this, ActiviteAccueil.class));
                 } else if (itemId == R.id.nav_modifierprofile) {
 
-                    startActivity(new Intent(ActiviteAccueil.this, ModificationProfile.class));
+                    startActivity(new Intent(StageDetailsActivity.this, ModificationProfile.class));
                 } else if (itemId == R.id.nav_slideshow) {
 
-                    startActivity(new Intent(ActiviteAccueil.this, SlideshowFragment.class));
+                    startActivity(new Intent(StageDetailsActivity.this, SlideshowFragment.class));
                 }
 
                 drawerLayout.closeDrawers();
@@ -117,5 +120,4 @@ public class ActiviteAccueil extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-
 }

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.GestonStages"
         tools:targetApi="31">
         <activity
+            android:name=".StageDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".RechercheStage"
             android:exported="false" />
         <activity
