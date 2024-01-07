@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,14 +33,12 @@ public class RechercheStage extends AppCompatActivity implements StageAdapter.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recherche_stage);
+        Log.d("RechercheStage", "onCreate");
 
-        drawerLayout = findViewById(R.id.drawer_layout);
-        actionBarDrawerToggle = new ActionBarDrawerToggle(
-                this,
-                drawerLayout,
-                R.string.navigation_drawer_open,
-                R.string.navigation_drawer_close
-        );
+
+
+
+
 
 
 
@@ -72,6 +71,8 @@ public class RechercheStage extends AppCompatActivity implements StageAdapter.On
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -98,68 +99,21 @@ public class RechercheStage extends AppCompatActivity implements StageAdapter.On
         bottomNavigationView.getMenu().findItem(R.id.menu_recherche).setActionView(new View(getApplicationContext()));
 
         bottomNavigationView.getMenu().findItem(R.id.menu_recherche).setChecked(true);
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        NavigationView navigationView = findViewById(R.id.nav_view);
-
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
 
 
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-                int itemId = menuItem.getItemId();
-
-                if (itemId == R.id.nav_home) {
-
-                    startActivity(new Intent(RechercheStage.this, ActiviteAccueil.class));
-                } else if (itemId == R.id.nav_modifierprofile) {
-
-                    startActivity(new Intent(RechercheStage.this, ModificationProfile.class));
-                } else if (itemId == R.id.nav_slideshow) {
-
-                    startActivity(new Intent(RechercheStage.this, SlideshowFragment.class));
-                }
-
-                drawerLayout.closeDrawers();
-
-                return true;
-            }
-
-
-        });
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int itemId = item.getItemId();
-
-        if (itemId == R.id.action_settings) {
-            return true;
-        }
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
 
 
 
     @Override
     public void onStageClick(Stage stage) {
+        Log.d("StageAdapter", "Item clicked: " + stage.getTitre());
         Intent intent = new Intent(this, StageDetailsActivity.class);
         intent.putExtra("stage", stage);
+        Log.d("StageAdapter", "Intent created: " + intent);
         startActivity(intent);
 
     }
+
 }

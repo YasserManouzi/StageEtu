@@ -1,5 +1,6 @@
 package com.example.gestonstages;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,8 @@ public class StageAdapter extends RecyclerView.Adapter<StageAdapter.StageViewHol
     public void onBindViewHolder(@NonNull StageViewHolder holder, int position) {
         Stage stage = listeStages.get(position);
         holder.bind(stage);
+
+        Log.d("StageAdapter", "onBindViewHolder: " + position);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
