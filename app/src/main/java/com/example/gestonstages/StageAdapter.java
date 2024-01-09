@@ -44,7 +44,7 @@ public class StageAdapter extends RecyclerView.Adapter<StageAdapter.StageViewHol
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (onStageClickListener != null) {
+                if (onStageClickListener != null && stage != null) {
                     onStageClickListener.onStageClick(stage);
                 }
             }
@@ -60,15 +60,25 @@ public class StageAdapter extends RecyclerView.Adapter<StageAdapter.StageViewHol
         private TextView textViewTitre;
         private TextView textViewCompagnie;
 
+
+
+
         public StageViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewTitre = itemView.findViewById(R.id.textViewTitre);
             textViewCompagnie = itemView.findViewById(R.id.textViewCompagnie);
+
+
         }
 
         public void bind(Stage stage) {
-            textViewTitre.setText(stage.getTitre());
-            textViewCompagnie.setText(stage.getNomCompagnie());
+            if (textViewTitre != null) {
+                textViewTitre.setText(stage.getTitre());
+            }
+            if (textViewCompagnie != null) {
+                textViewCompagnie.setText(stage.getNomCompagnie());
+
         }
     }
 }
+    }

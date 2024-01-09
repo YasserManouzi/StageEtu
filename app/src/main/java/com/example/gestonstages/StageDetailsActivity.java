@@ -7,9 +7,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.gestonstages.ui.slideshow.SlideshowFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -27,6 +29,24 @@ public class StageDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stage_details);
 
 
+        Intent intent = getIntent();
+        if (intent != null) {
+            Stage stage = intent.getParcelableExtra("stage");
+
+            if (stage != null) {
+                // Accédez aux propriétés de l'objet stage
+                TextView tv_Titre = findViewById(R.id.tv_Titre);
+                TextView tv_Compagnie = findViewById(R.id.tv_Compagnie);
+
+
+                tv_Titre.setText(stage.getTitre());
+                tv_Compagnie.setText(stage.getNomCompagnie());
+
+            } else {
+                Log.e("StageDetailsActivity", "Stage object is null");
+            }
+        }
+
         drawerLayout = findViewById(R.id.drawer_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(
                 this,
@@ -34,6 +54,7 @@ public class StageDetailsActivity extends AppCompatActivity {
                 R.string.navigation_drawer_open,
                 R.string.navigation_drawer_close
         );
+
 
 
 
@@ -121,4 +142,5 @@ public class StageDetailsActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
 }

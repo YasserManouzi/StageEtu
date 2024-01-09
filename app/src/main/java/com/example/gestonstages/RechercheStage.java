@@ -26,21 +26,12 @@ public class RechercheStage extends AppCompatActivity implements StageAdapter.On
 
     private ArrayList<Stage> listeStages;
 
-    private DrawerLayout drawerLayout;
-    private ActionBarDrawerToggle actionBarDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recherche_stage);
         Log.d("RechercheStage", "onCreate");
-
-
-
-
-
-
-
 
 
         listeStages = new ArrayList<>();
@@ -109,6 +100,8 @@ public class RechercheStage extends AppCompatActivity implements StageAdapter.On
     @Override
     public void onStageClick(Stage stage) {
         Log.d("StageAdapter", "Item clicked: " + stage.getTitre());
+
+
         Intent intent = new Intent(this, StageDetailsActivity.class);
         intent.putExtra("stage", stage);
         Log.d("StageAdapter", "Intent created: " + intent);
