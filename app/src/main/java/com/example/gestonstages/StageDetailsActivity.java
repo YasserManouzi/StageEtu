@@ -34,13 +34,20 @@ public class StageDetailsActivity extends AppCompatActivity {
             Stage stage = intent.getParcelableExtra("stage");
 
             if (stage != null) {
-                // Accédez aux propriétés de l'objet stage
                 TextView tv_Titre = findViewById(R.id.tv_Titre);
                 TextView tv_Compagnie = findViewById(R.id.tv_Compagnie);
+
+                TextView tv_Adresse = findViewById(R.id.tv_Adresse);
+                TextView tv_Exigences = findViewById(R.id.tv_Exigences);
+                TextView tv_Description = findViewById(R.id.tv_Description);
+
 
 
                 tv_Titre.setText(stage.getTitre());
                 tv_Compagnie.setText(stage.getNomCompagnie());
+                tv_Adresse.setText(stage.getAdresse());
+                tv_Exigences.setText(stage.getExigences());
+                tv_Description.setText(stage.getDescription());
 
             } else {
                 Log.e("StageDetailsActivity", "Stage object is null");
@@ -68,6 +75,8 @@ public class StageDetailsActivity extends AppCompatActivity {
                     bottomNavigationView.getMenu().findItem(R.id.menu_recherche).setChecked(false);
 
                     bottomNavigationView.getMenu().findItem(R.id.menu_recherche).setActionView(new View(getApplicationContext()));
+
+                    startActivity(new Intent(StageDetailsActivity.this, RechercheStage.class));
 
 
 

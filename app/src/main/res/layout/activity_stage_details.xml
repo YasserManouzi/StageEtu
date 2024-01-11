@@ -21,33 +21,95 @@
         android:fitsSystemWindows="true"
         tools:openDrawer="start">
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/relativeLayout2"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!-- Ajoutez d'autres TextViews ou éléments ici pour les autres détails du stage -->
 
             <TextView
                 android:id="@+id/tv_Titre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textSize="18sp"
                 android:layout_marginTop="16dp"
-                android:layout_centerHorizontal="true"/>
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_Compagnie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:layout_below="@+id/tv_Titre"
                 android:layout_marginTop="8dp"
-                android:layout_centerHorizontal="true"/>
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Titre" />
 
-            <!-- Ajoutez d'autres TextViews ou éléments ici pour les autres détails du stage -->
 
-        </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_Adresse_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adresse:"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Compagnie" />
+
+            <TextView
+                android:id="@+id/tv_Adresse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Adresse_Label" />
+
+            <TextView
+                android:id="@+id/tv_Exigences_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exigences:"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Adresse" />
+
+            <TextView
+                android:id="@+id/tv_Exigences"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Exigences_Label" />
+
+            <TextView
+                android:id="@+id/tv_Description_Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description:"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Exigences" />
+            <TextView
+                android:id="@+id/tv_Description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Description_Label" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/nav_view"

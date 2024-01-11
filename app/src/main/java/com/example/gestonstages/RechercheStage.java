@@ -35,7 +35,7 @@ public class RechercheStage extends AppCompatActivity implements StageAdapter.On
 
 
         listeStages = new ArrayList<>();
-        listeStages.add(new Stage("Stage Hiver Develpper Full Stack", "Ex-Programming", "Montréal", "Technique informatique", "Description 1"));
+        listeStages.add(new Stage("Stage Hiver Develpper Full Stack", "Ex-Programming", "Montreal", "Technique informatique", "Description 1"));
         listeStages.add(new Stage("Titre 2", "Compagnie 2", "Adresse 2", "Exigences 2", "Description 2"));
         listeStages.add(new Stage("Titre 2", "Compagnie 2", "Adresse 2", "Exigences 2", "Description 2"));
         listeStages.add(new Stage("Titre 2", "Compagnie 2", "Adresse 2", "Exigences 2", "Description 2"));
